@@ -80,7 +80,7 @@ jobs:
             -postScript ghidra_${{ needs.Build-Ubuntu.outputs.GHIDRA_VER }}/Ghidra/Extensions/ghidra-xbe/tests/test_load.py
 
   Create-Release:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    #if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     needs: [Build-Ubuntu, Test-Windows, Test-macOS]
     runs-on: ubuntu-latest
     steps:
